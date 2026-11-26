@@ -1,10 +1,13 @@
+<p align="center">
+  <img src="assets/logo.svg" alt="Hyperfocus" width="120" />
+</p>
 <h1 align="center">Hyperfocus</h1>
 
 <p align="center">
   <strong>Replies you can act on without scrolling back.</strong>
 </p>
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.0.0-CAACFB?style=flat" alt="Version 1.0.0"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.1.0-CAACFB?style=flat" alt="Version 1.1.0"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/adinafxv/hyperfocus?style=flat" alt="License"></a>
 </p>
 
@@ -29,22 +32,24 @@ Restart Claude Code, then type `/hyperfocus`. [Other ways to install ↓](#other
 
 A skill for people who read only Claude's final message, between other work. The first line says what happened. The last line says what you do next. Everything in between is short, concrete and checkable.
 
-Written by a product designer, so it also respects your designs: it matches the frame you give it and offers variants with real values instead of opinions.
+It also respects what you already have. Designers get their grid, tokens and components kept. Engineers get their architecture, naming and libraries kept, with no new dependency where an existing one fits.
 
 ## What changes
+
+**Design**
 
 <table>
 <tr>
 <td width="50%">
 
-### Before
+Before
 
 > I've gone ahead and explored a few directions for the onboarding screen. I tried a softer purple palette, which I think feels more welcoming, and adjusted some spacing. There were a couple of things I wasn't sure about, like whether to keep the illustration. Also, I noticed the button styles are a bit inconsistent across the app, which might be worth looking at sometime. Let me know what you think and if you'd like any changes!
 
 </td>
 <td width="50%">
 
-### After
+After
 
 > 3 onboarding variants are drafted in `designs/onboarding.html`.
 >
@@ -62,9 +67,38 @@ Written by a product designer, so it also respects your designs: it matches the 
 </tr>
 </table>
 
+**Code**
+
+<table>
+<tr>
+<td width="50%">
+
+Before
+
+> Great question! I looked into the slow search endpoint. There are a few things going on: the query isn't using an index, and the results are serialized in a loop. I added a caching layer with Redis, which should make things much faster. I also refactored the service into a new repository pattern, since that's cleaner. You may want to run the tests. Let me know if you have questions!
+
+</td>
+<td width="50%">
+
+After
+
+> `/search` is faster: p95 840 ms → 210 ms on the seed data.
+>
+> - Added index on `products(name)` in `migrations/0042_search_index.sql`
+> - Batched serialization in `src/search/service.ts:57`, same pattern as `orders/service.ts`
+> - 38 of 38 search tests pass. Not checked against production data.
+>
+> 1. Run `npm run migrate` before deploying.
+>
+> Separately: Redis caching would cut another ~100 ms but adds a dependency. Want a proposal?
+
+</td>
+</tr>
+</table>
+
 ## The rules
 
-10 reply rules and 4 work rules. Full text in [SKILL.md](skills/hyperfocus/SKILL.md).
+10 reply rules, 4 work rules and a check before sending. Full text in [SKILL.md](skills/hyperfocus/SKILL.md).
 
 **The reply**
 
@@ -83,7 +117,7 @@ Written by a product designer, so it also respects your designs: it matches the 
 
 - Keep momentum: finish in one go, stop only before something hard to undo.
 - Fast path first: fewest tool calls that do the job.
-- Respect the design: match what you gave it, keep what you liked.
+- Respect what exists: match the design or code architecture you gave it.
 - Break the debug spiral: after two failed fixes, check the assumption first.
 
 **Before sending:** the first and last line must say what happened and what you do next.
@@ -123,7 +157,7 @@ claude plugin install hyperfocus@hyperfocus
 
 ## Credits
 
-README layout inspired by [i-have-adhd](https://github.com/ayghri/i-have-adhd) by ayghri.
+Hyperfocus builds on [i-have-adhd](https://github.com/ayghri/i-have-adhd) by ayghri (MIT). Several reply rules, the debug-spiral rule and the first-and-last-line check come from it, and so does this README's layout. Hyperfocus adds rules about delivery (where to see it, what was and was not done), respecting existing work, and keeping momentum. It is made to switch on by itself, for any reader.
 
 ## License
 
