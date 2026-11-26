@@ -2,6 +2,14 @@
 
 All notable changes to Hyperfocus. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions: [SemVer](https://semver.org).
 
+## [1.3.0] - 2026-11-26
+
+### Added
+- When turned on in Claude Code, Hyperfocus asks once per session whether you also want `/focus`, which hides the steps along the way.
+
+### Changed
+- README: rules moved up, right after "Use".
+
 ## [1.2.0] - 2026-11-26
 
 ### Changed
@@ -37,6 +45,7 @@ First public release.
 - **Before sending:** first-and-last-line check.
 - Claude Code plugin manifest (`.claude-plugin/`) for `claude plugin install`.
 
+[1.3.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.3.0
 [1.2.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.2.0
 [1.1.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.1.0
 [1.0.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.0.0

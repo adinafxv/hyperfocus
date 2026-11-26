@@ -7,7 +7,7 @@
   <strong>Replies you can act on without scrolling back.</strong>
 </p>
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.2.0-FF7F61?style=flat" alt="Version 1.2.0"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.3.0-FF7F61?style=flat" alt="Version 1.3.0"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/adinafxv/hyperfocus?style=flat" alt="License"></a>
 </p>
 
@@ -36,7 +36,7 @@ Hyperfocus is off until you ask for it.
 - **Turn off:** say "stop hyperfocus" or "normal mode".
 - **Always on:** add this line to `~/.claude/CLAUDE.md`: `Use the hyperfocus skill for every reply.`
 
-> **Best with `/focus`.** Claude Code's `/focus` hides the steps along the way, so you see only the final message. Hyperfocus makes that final message the one you need. Turn both on.
+> **Best with `/focus`.** Claude Code's `/focus` hides the steps along the way, so you see only the final message. Hyperfocus makes that final message the one you need. When you turn Hyperfocus on, it asks once whether you want `/focus` too.
 
 ## The rules
 

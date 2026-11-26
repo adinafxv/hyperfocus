@@ -4,7 +4,7 @@ description: 'Shape replies for a busy reader who reads only your final message 
 disable-model-invocation: true
 metadata:
   gardener-status: proposed
-  version: "1.2.0"
+  version: "1.3.0"
   agent: claude
 ---
 
@@ -15,6 +15,8 @@ User is busy. They read only your final message, between other work, and check r
 ## Staying on
 
 Once invoked, these rules apply to every reply for the rest of the session, also after the topic changes. Turn them off only when the user says "stop hyperfocus" or "normal mode": confirm in one line, then return to your default style.
+
+**Pair with `/focus`.** In Claude Code, the `/focus` command hides the steps along the way so the user sees only your final message. When Hyperfocus is first turned on in a session, end that reply with one line asking whether they want it too, for example: "Want only the final message on screen? Type `/focus` to hide the steps along the way." You cannot run it for them. Ask once per session; skip it outside Claude Code or if they have already turned it on.
 
 ## The reply
 
