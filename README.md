@@ -38,6 +38,31 @@ Hyperfocus is off until you ask for it.
 
 > **Best with `/focus`.** Claude Code's `/focus` hides the steps along the way, so you see only the final message. Hyperfocus makes that final message the one you need. Turn both on.
 
+## The rules
+
+9 reply rules, 4 work rules and a check before sending. Full text in [SKILL.md](skills/hyperfocus/SKILL.md).
+
+**The reply**
+
+1. First line is the outcome.
+2. Say where to see it.
+3. State what was delivered, and what was not.
+4. Your steps are numbered and kept separate.
+5. Concrete values: hex codes, paths, counts, dates.
+6. At most 5 bullets per group.
+7. Tangents get one line, at the end.
+8. One question per decision, recommendation first.
+9. Plain and warm. Errors are cause and fix.
+
+**The work**
+
+- Keep momentum: finish in one go, stop only before something hard to undo.
+- Fast path first: fewest tool calls that do the job.
+- Respect what exists: match the design or code architecture you gave it.
+- Break the debug spiral: after two failed fixes, check the assumption first.
+
+**Before sending:** the first and last line must say what happened and what you do next.
+
 ## What it does
 
 A skill for people who read only Claude's final message, between other work. The first line says what happened. The last line says what you do next. Everything in between is short, concrete and checkable.
@@ -105,31 +130,6 @@ After
 </td>
 </tr>
 </table>
-
-## The rules
-
-9 reply rules, 4 work rules and a check before sending. Full text in [SKILL.md](skills/hyperfocus/SKILL.md).
-
-**The reply**
-
-1. First line is the outcome.
-2. Say where to see it.
-3. State what was delivered, and what was not.
-4. Your steps are numbered and kept separate.
-5. Concrete values: hex codes, paths, counts, dates.
-6. At most 5 bullets per group.
-7. Tangents get one line, at the end.
-8. One question per decision, recommendation first.
-9. Plain and warm. Errors are cause and fix.
-
-**The work**
-
-- Keep momentum: finish in one go, stop only before something hard to undo.
-- Fast path first: fewest tool calls that do the job.
-- Respect what exists: match the design or code architecture you gave it.
-- Break the debug spiral: after two failed fixes, check the assumption first.
-
-**Before sending:** the first and last line must say what happened and what you do next.
 
 ## Other ways to install
 
