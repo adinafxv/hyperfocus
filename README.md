@@ -7,7 +7,7 @@
   <strong>Replies you can act on without scrolling back.</strong>
 </p>
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-2.0.0-FF7F61?style=flat" alt="Version 2.0.0"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-2.0.1-FF7F61?style=flat" alt="Version 2.0.1"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/adinafxv/hyperfocus?style=flat" alt="License"></a>
 </p>
 
@@ -38,6 +38,20 @@ Installed as a plugin, Hyperfocus is **on by default** in every Claude Code sess
 - **Copied the folder instead of installing the plugin?** Then it does not start by itself: type `/hyperfocus` in each session.
 
 > **Best with `/focus`.** Claude Code's `/focus` hides the steps along the way, so you see only the final message. Hyperfocus makes that final message the one you need. In each session, Hyperfocus asks once whether you want `/focus` too.
+
+## Updates
+
+Claude Code does not update Hyperfocus by itself. Pick one:
+
+- **Automatic (recommended):** in Claude Code, open `/plugin` → **Marketplaces** → **hyperfocus** → enable auto-update. New versions install when Claude Code starts.
+- **By hand:** run
+
+  ```bash
+  claude plugin marketplace update hyperfocus
+  claude plugin update hyperfocus@hyperfocus
+  ```
+
+See what changed in the [changelog](CHANGELOG.md).
 
 ## The rules
 

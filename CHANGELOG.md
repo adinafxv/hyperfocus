@@ -2,6 +2,11 @@
 
 All notable changes to Hyperfocus. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions: [SemVer](https://semver.org).
 
+## [2.0.1] - 2026-11-26
+
+### Added
+- README: "Updates" section with how to turn on auto-update or update by hand.
+
 ## [2.0.0] - 2026-11-26
 
 Major version: the default reverses. 1.2.0 made Hyperfocus off until `/hyperfocus`; it is now on by default.
@@ -66,6 +71,7 @@ First public release.
 - **Before sending:** first-and-last-line check.
 - Claude Code plugin manifest (`.claude-plugin/`) for `claude plugin install`.
 
+[2.0.1]: https://github.com/adinafxv/hyperfocus/releases/tag/v2.0.1
 [2.0.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v2.0.0
 [1.4.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.4.0
 [1.3.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.3.0
