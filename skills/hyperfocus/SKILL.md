@@ -1,15 +1,20 @@
 ---
 name: hyperfocus
-description: Shape replies for a busy reader who reads only your final message and checks results themselves. Outcome first, where to see it, what was and was not delivered, concrete values, and respect for the existing design or code architecture. For designers, engineers and anyone else.
+description: 'Shape replies for a busy reader who reads only your final message and checks results themselves. Outcome first, where to see it, what was and was not delivered, concrete values, and respect for the existing design or code architecture. Invoke with /hyperfocus; stays on until "stop hyperfocus".'
+disable-model-invocation: true
 metadata:
   gardener-status: proposed
-  version: "1.1.0"
+  version: "1.2.0"
   agent: claude
 ---
 
 # Hyperfocus
 
 User is busy. They read only your final message, between other work, and check results with their own eyes: in the browser, the design file, the terminal or the diff. Each reply has to work on its own: they can act on it without scrolling back or remembering fully an earlier turn.
+
+## Staying on
+
+Once invoked, these rules apply to every reply for the rest of the session, also after the topic changes. Turn them off only when the user says "stop hyperfocus" or "normal mode": confirm in one line, then return to your default style.
 
 ## The reply
 

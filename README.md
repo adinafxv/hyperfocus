@@ -7,7 +7,7 @@
   <strong>Replies you can act on without scrolling back.</strong>
 </p>
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.1.0-FF7F61?style=flat" alt="Version 1.1.0"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.2.0-FF7F61?style=flat" alt="Version 1.2.0"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/adinafxv/hyperfocus?style=flat" alt="License"></a>
 </p>
 
@@ -26,7 +26,17 @@ claude plugin marketplace add adinafxv/hyperfocus
 claude plugin install hyperfocus@hyperfocus
 ```
 
-Restart Claude Code, then type `/hyperfocus`. [Other ways to install ↓](#other-ways-to-install)
+Restart Claude Code, then type `/hyperfocus`. [Other agents and ways to install ↓](#other-ways-to-install)
+
+## Use
+
+Hyperfocus is off until you ask for it.
+
+- **Turn on:** type `/hyperfocus`. It stays on for the whole session.
+- **Turn off:** say "stop hyperfocus" or "normal mode".
+- **Always on:** add this line to `~/.claude/CLAUDE.md`: `Use the hyperfocus skill for every reply.`
+
+> **Best with `/focus`.** Claude Code's `/focus` hides the steps along the way, so you see only the final message. Hyperfocus makes that final message the one you need. Turn both on.
 
 ## What it does
 
@@ -123,13 +133,29 @@ After
 
 ## Other ways to install
 
-**Claude Code, without the plugin system.** Copy the skill folder:
+Hyperfocus is a plain `SKILL.md` in the open [Agent Skills](https://agentskills.io) format, so any agent that reads skills can use it. Clone once:
 
 ```bash
 git clone https://github.com/adinafxv/hyperfocus.git
+```
+
+Then copy `hyperfocus/skills/hyperfocus` into your agent's skills folder:
+
+| Agent | Folder |
+| --- | --- |
+| Claude Code | `~/.claude/skills/` |
+| Cursor | `~/.cursor/skills/` |
+| GitHub Copilot | `~/.copilot/skills/` |
+| Codex, OpenCode and others | `~/.agents/skills/` (shared folder; check your agent's docs) |
+
+For example, Claude Code without the plugin system:
+
+```bash
 mkdir -p ~/.claude/skills
 cp -r hyperfocus/skills/hyperfocus ~/.claude/skills/
 ```
+
+Some agents ignore the `/hyperfocus` switch and decide on their own when to use a skill.
 
 Use `.claude/skills/` inside a project to enable it for that project only.
 
@@ -156,7 +182,7 @@ claude plugin install hyperfocus@hyperfocus
 
 ## Credits
 
-Hyperfocus builds on [i-have-adhd](https://github.com/ayghri/i-have-adhd) by ayghri (MIT). Several reply rules, the debug-spiral rule and the first-and-last-line check come from it, and so does this README's layout. Hyperfocus adds rules about delivery (where to see it, what was and was not done), respecting existing work, and keeping momentum. It is made to switch on by itself, for any reader.
+Hyperfocus builds on [i-have-adhd](https://github.com/ayghri/i-have-adhd) by ayghri (MIT). Several reply rules, the debug-spiral rule and the first-and-last-line check come from it, and so does this README's layout. Hyperfocus adds rules about delivery (where to see it, what was and was not done), respecting existing work, and keeping momentum. It is written for any reader, not only people with ADHD.
 
 ## License
 

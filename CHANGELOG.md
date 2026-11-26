@@ -2,6 +2,15 @@
 
 All notable changes to Hyperfocus. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions: [SemVer](https://semver.org).
 
+## [1.2.0] - 2026-11-26
+
+### Changed
+- Off by default. Turn on with `/hyperfocus`; it stays on for the session until "stop hyperfocus" or "normal mode" (`disable-model-invocation: true`).
+
+### Added
+- "Staying on" section in `SKILL.md`.
+- README: how to use it, always-on tip, pairing with Claude Code's `/focus`, install folders for Cursor, Copilot, Codex and other agents.
+
 ## [1.1.0] - 2026-11-26
 
 ### Changed
@@ -28,5 +37,6 @@ First public release.
 - **Before sending:** first-and-last-line check.
 - Claude Code plugin manifest (`.claude-plugin/`) for `claude plugin install`.
 
+[1.2.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.2.0
 [1.1.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.1.0
 [1.0.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.0.0
