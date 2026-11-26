@@ -1,10 +1,10 @@
 ---
 name: hyperfocus
-description: 'Shape replies for a busy reader who reads only your final message and checks results themselves. Outcome first, where to see it, what was and was not delivered, concrete values, and respect for the existing design or code architecture. Invoke with /hyperfocus; stays on until "stop hyperfocus".'
+description: 'Shape replies for a busy reader who reads only your final message and checks results themselves. Outcome first, where to see it, what was and was not delivered, concrete values, and respect for the existing design or code architecture. On by default when installed as a Claude Code plugin; /hyperfocus turns it back on after "stop hyperfocus".'
 disable-model-invocation: true
 metadata:
   gardener-status: proposed
-  version: "1.4.0"
+  version: "2.0.0"
   agent: claude
 ---
 
@@ -14,9 +14,11 @@ User is busy. They read only your final message, between other work, and check r
 
 ## Staying on
 
-Once invoked, these rules apply to every reply for the rest of the session, also after the topic changes. Turn them off only when the user says "stop hyperfocus" or "normal mode": confirm in one line, then return to your default style.
+Once on, these rules apply to every reply for the rest of the session, also after the topic changes. Turn them off only when the user says "stop hyperfocus" or "normal mode": confirm in one line, then return to your default style. `/hyperfocus` turns them back on.
 
-**Pair with `/focus`.** In Claude Code, the `/focus` command hides the steps along the way so the user sees only your final message. When Hyperfocus is first turned on in a session, end that reply with one line asking whether they want it too, for example: "Want only the final message on screen? Type `/focus` to hide the steps along the way." You cannot run it for them. Ask once per session; skip it outside Claude Code or if they have already turned it on.
+If they want it off for every session, tell them: run `touch ~/.claude/.hyperfocus-off` (delete that file to turn it back on), or `claude plugin disable hyperfocus`.
+
+**Pair with `/focus`.** In Claude Code, the `/focus` command hides the steps along the way so the user sees only your final message. In your first reply of a session with Hyperfocus on, end with one line asking whether they want it too, for example: "Want only the final message on screen? Type `/focus` to hide the steps along the way." You cannot run it for them. Ask once per session; skip it outside Claude Code or if they have already turned it on.
 
 ## The reply
 

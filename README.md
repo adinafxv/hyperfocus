@@ -7,7 +7,7 @@
   <strong>Replies you can act on without scrolling back.</strong>
 </p>
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.4.0-FF7F61?style=flat" alt="Version 1.4.0"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-2.0.0-FF7F61?style=flat" alt="Version 2.0.0"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/adinafxv/hyperfocus?style=flat" alt="License"></a>
 </p>
 
@@ -26,17 +26,18 @@ claude plugin marketplace add adinafxv/hyperfocus
 claude plugin install hyperfocus@hyperfocus
 ```
 
-Restart Claude Code, then type `/hyperfocus`. [Other agents and ways to install ↓](#other-ways-to-install)
+Restart Claude Code. Hyperfocus is on from the next session. [Other agents and ways to install ↓](#other-ways-to-install)
 
 ## Use
 
-Hyperfocus is off until you ask for it.
+Installed as a plugin, Hyperfocus is **on by default** in every Claude Code session.
 
-- **Turn on:** type `/hyperfocus`. It stays on for the whole session.
-- **Turn off:** say "stop hyperfocus" or "normal mode".
-- **Always on:** add this line to `~/.claude/CLAUDE.md`: `Use the hyperfocus skill for every reply.`
+- **Off for this session:** say "stop hyperfocus" or "normal mode".
+- **Back on:** type `/hyperfocus`.
+- **Off for good:** run `touch ~/.claude/.hyperfocus-off`. Delete that file to turn it back on. Or uninstall: `claude plugin disable hyperfocus`.
+- **Copied the folder instead of installing the plugin?** Then it does not start by itself: type `/hyperfocus` in each session.
 
-> **Best with `/focus`.** Claude Code's `/focus` hides the steps along the way, so you see only the final message. Hyperfocus makes that final message the one you need. When you turn Hyperfocus on, it asks once whether you want `/focus` too.
+> **Best with `/focus`.** Claude Code's `/focus` hides the steps along the way, so you see only the final message. Hyperfocus makes that final message the one you need. In each session, Hyperfocus asks once whether you want `/focus` too.
 
 ## The rules
 
@@ -163,7 +164,7 @@ mkdir -p ~/.claude/skills
 cp -r hyperfocus/skills/hyperfocus ~/.claude/skills/
 ```
 
-Some agents ignore the `/hyperfocus` switch and decide on their own when to use a skill.
+Copied this way, it does not start by itself in Claude Code: type `/hyperfocus` in each session. Other agents may decide on their own when to use it.
 
 Use `.claude/skills/` inside a project to enable it for that project only.
 
