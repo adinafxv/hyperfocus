@@ -1,0 +1,10 @@
+{
+  "name": "hyperfocus",
+  "version": "1.0.0",
+  "description": "Replies that lead with the outcome, say where to see it, and keep your steps separate. Built for people who read only the last message.",
+  "author": { "name": "Adina" },
+  "homepage": "https://github.com/adinafxv/hyperfocus",
+  "repository": "https://github.com/adinafxv/hyperfocus",
+  "license": "MIT",
+  "keywords": ["output-style", "focus", "concise", "designer", "adhd-friendly"]
+}

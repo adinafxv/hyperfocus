@@ -1,0 +1,17 @@
+{
+  "name": "hyperfocus",
+  "owner": {
+    "name": "Adina"
+  },
+  "metadata": {
+    "description": "Hyperfocus: a Claude skill for replies you can act on without scrolling back."
+  },
+  "plugins": [
+    {
+      "name": "hyperfocus",
+      "source": "./",
+      "description": "Replies that lead with the outcome, say where to see it, and keep your steps separate.",
+      "version": "1.0.0"
+    }
+  ]
+}
