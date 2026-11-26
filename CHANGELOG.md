@@ -15,6 +15,9 @@ All notable changes to Hyperfocus. Format: [Keep a Changelog](https://keepachang
 - Coding Before/After example in the README.
 - Credits to i-have-adhd for the rules Hyperfocus builds on.
 
+### Removed
+- "Match their language" rule. Claude already does this by default.
+
 ## [1.0.0] - 2026-11-26
 
 First public release.

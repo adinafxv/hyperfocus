@@ -98,7 +98,7 @@ After
 
 ## The rules
 
-10 reply rules, 4 work rules and a check before sending. Full text in [SKILL.md](skills/hyperfocus/SKILL.md).
+9 reply rules, 4 work rules and a check before sending. Full text in [SKILL.md](skills/hyperfocus/SKILL.md).
 
 **The reply**
 
@@ -110,8 +110,7 @@ After
 6. At most 5 bullets per group.
 7. Tangents get one line, at the end.
 8. One question per decision, recommendation first.
-9. Reply in your language.
-10. Plain and warm. Errors are cause and fix.
+9. Plain and warm. Errors are cause and fix.
 
 **The work**
 
