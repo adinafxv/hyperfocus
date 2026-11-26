@@ -2,6 +2,12 @@
 
 All notable changes to Hyperfocus. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions: [SemVer](https://semver.org).
 
+## [1.4.0] - 2026-11-26
+
+### Added
+- Portable `plugin.json` at the repo root (Agent Plugins format), for ChatGPT and Codex.
+- README: how a ChatGPT workspace admin imports Hyperfocus from GitHub with daily sync.
+
 ## [1.3.0] - 2026-11-26
 
 ### Added
@@ -45,6 +51,7 @@ First public release.
 - **Before sending:** first-and-last-line check.
 - Claude Code plugin manifest (`.claude-plugin/`) for `claude plugin install`.
 
+[1.4.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.4.0
 [1.3.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.3.0
 [1.2.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.2.0
 [1.1.0]: https://github.com/adinafxv/hyperfocus/releases/tag/v1.1.0

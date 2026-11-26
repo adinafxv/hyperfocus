@@ -7,7 +7,7 @@
   <strong>Replies you can act on without scrolling back.</strong>
 </p>
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.3.0-FF7F61?style=flat" alt="Version 1.3.0"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.4.0-FF7F61?style=flat" alt="Version 1.4.0"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/adinafxv/hyperfocus?style=flat" alt="License"></a>
 </p>
 
@@ -133,7 +133,15 @@ After
 
 ## Other ways to install
 
-Hyperfocus is a plain `SKILL.md` in the open [Agent Skills](https://agentskills.io) format, so any agent that reads skills can use it. Clone once:
+**ChatGPT and Codex (workspaces).** A workspace admin can import Hyperfocus as a plugin, and it then updates daily from this repo:
+
+1. Open **ChatGPT Admin Console → Plugins → Add → Import marketplace**.
+2. Enter `https://github.com/adinafxv/hyperfocus`, leave **Path** empty, set **Branch** to `main`.
+3. Authorize GitHub, import, and choose who can install it.
+
+See OpenAI's guide: [Importing and syncing plugin marketplaces from GitHub](https://help.openai.com/en/articles/20001504-importing-and-syncing-plugin-marketplaces-from-github). The repo also ships a portable [`plugin.json`](plugin.json) in the [Agent Plugins](https://developers.openai.com/plugins/build/plugins) format.
+
+**Any agent with skills.** Hyperfocus is a plain `SKILL.md` in the open [Agent Skills](https://agentskills.io) format, so any agent that reads skills can use it. Clone once:
 
 ```bash
 git clone https://github.com/adinafxv/hyperfocus.git
@@ -174,7 +182,7 @@ claude plugin install hyperfocus@hyperfocus
 
 ## Versions
 
-[Semantic versioning](https://semver.org). Every release updates `SKILL.md`, both files in `.claude-plugin/`, [CHANGELOG.md](CHANGELOG.md), and gets a git tag.
+[Semantic versioning](https://semver.org). Every release updates `SKILL.md`, `plugin.json`, both files in `.claude-plugin/`, [CHANGELOG.md](CHANGELOG.md), and gets a git tag.
 
 - **Major** (2.0.0): a rule is removed or reverses behaviour.
 - **Minor** (1.1.0): a new rule or section.

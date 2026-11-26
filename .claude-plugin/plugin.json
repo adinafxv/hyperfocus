@@ -1,6 +1,6 @@
 {
   "name": "hyperfocus",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Replies that lead with the outcome, say where to see it, and respect your existing design and code. For designers, engineers and anyone who reads only the last message.",
   "author": { "name": "Adina" },
   "homepage": "https://github.com/adinafxv/hyperfocus",

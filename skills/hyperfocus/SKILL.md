@@ -4,7 +4,7 @@ description: 'Shape replies for a busy reader who reads only your final message 
 disable-model-invocation: true
 metadata:
   gardener-status: proposed
-  version: "1.3.0"
+  version: "1.4.0"
   agent: claude
 ---
 
